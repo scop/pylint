@@ -176,13 +176,12 @@ def build_message_def(checker, msgid, msg_tuple):
                       "a symbolic name" % msgid, DeprecationWarning)
         symbol = None
     options.setdefault('scope', default_scope)
-    return MessageDefinition(checker, msgid, msg, descr, symbol, **options)
+    return MessageDefinition(msgid, msg, descr, symbol, **options)
 
 
 class MessageDefinition(object):
-    def __init__(self, checker, msgid, msg, descr, symbol, scope,
+    def __init__(self, msgid, msg, descr, symbol, scope,
                  minversion=None, maxversion=None, old_names=None):
-        self.checker = checker
         if len(msgid) != 5:
             raise InvalidMessageError('Invalid message id %r' % msgid)
         if not msgid[0] in MSG_TYPES:
@@ -253,6 +252,7 @@ class MessagesHandlerMixIn(object):
         self.stats = {
             'by_module': {},
             'by_msg': {},
+            'statement': 0,
         }
         super().__init__()
 
@@ -367,7 +367,7 @@ class MessagesHandlerMixIn(object):
                 for msgid in msgids:
                     self.disable(msgid)
 
-    def init_msg_states(self):
+    def _init_msg_states(self):
         for msg in self.msgs_store.messages:
             if not msg.may_be_emitted():
                 self._msgs_state[msg.msgid] = False
