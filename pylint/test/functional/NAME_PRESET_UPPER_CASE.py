@@ -21,3 +21,7 @@ class MyClass:  # [invalid-name]
 
 def sayHello():  # [invalid-name]
     pass
+
+
+def SAY_hello():  # [invalid-name]
+    pass
