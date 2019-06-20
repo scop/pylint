@@ -1,0 +1,13 @@
+[BASIC]
+function-naming-style=UPPER_CASE
+const-naming-style=UPPER_CASE
+attr-naming-style=UPPER_CASE
+argument-naming-style=UPPER_CASE
+module-naming-style=UPPER_CASE
+method-naming-style=UPPER_CASE
+variable-naming-style=UPPER_CASE
+class-attribute-naming-style=UPPER_CASE
+inlinevar-naming-style=UPPER_CASE
+class-naming-style=UPPER_CASE
+
+include-naming-hint=yes

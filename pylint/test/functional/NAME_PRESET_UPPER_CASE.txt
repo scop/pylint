@@ -1,0 +1,3 @@
+invalid-name:10:MyClass:"Class name ""MyClass"" doesn't conform to UPPER_CASE naming style ('[A-Z_][A-Z0-9_]+$' pattern)"
+invalid-name:15:MyClass.MY_PUBLIC_X:"Argument name ""self"" doesn't conform to UPPER_CASE naming style ('([A-Z_][A-Z0-9_]{2,})|(__[a-z][a-zA-Z0-9_]+__)$' pattern)"
+invalid-name:22:sayHello:"Function name ""sayHello"" doesn't conform to UPPER_CASE naming style ('([A-Z_][A-Z0-9_]{2,})|(__[a-z][a-zA-Z0-9_]+__)$' pattern)"
