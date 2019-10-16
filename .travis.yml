@@ -29,8 +29,9 @@ jobs:
   - python: 3.6
     env: TOXENV=spelling
   - stage: tests-pypy
-    python: pypy3.5
+    python: pypy3.6
     env: TOXENV=pypy
+    dist: bionic
 before_install:
 - python --version
 - uname -a
